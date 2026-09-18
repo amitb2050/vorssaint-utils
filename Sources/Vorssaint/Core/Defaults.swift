@@ -128,6 +128,9 @@ enum DefaultsKey {
     static let soundOutputSwitcherEnabled = "soundOutputSwitcherEnabled"
     static let soundOutputSwitcherShortcut = "soundOutputSwitcherShortcut"
     static let soundOutputSwitcherDeviceUIDs = "soundOutputSwitcherDeviceUIDs"
+    static let hourlyBeepEnabled = "hourlyBeepEnabled"
+    static let hourlyBeepVolumeCap = "hourlyBeepVolumeCap"
+    static let hourlyBeepSound = "hourlyBeepSound"
     static let preferredInputDevice = "preferredInputDevice" // audio input device UID
     static let finderCutPasteEnabled = "finderCutPasteEnabled"
     static let finderCutPasteShowHUD = "finderCutPasteShowHUD"
@@ -1033,6 +1036,9 @@ enum Defaults {
         DefaultsKey.preciseVolumeRollerEnabled: false,
         DefaultsKey.soundOutputSwitcherEnabled: false,
         DefaultsKey.soundOutputSwitcherShortcut: GlobalShortcut.soundOutputSwitcherDefault.storageValue,
+        DefaultsKey.hourlyBeepEnabled: false,
+        DefaultsKey.hourlyBeepVolumeCap: 0.12,
+        DefaultsKey.hourlyBeepSound: "Glass",
         // Finder never benefits from being "quit" (it just relaunches), so
         // it's excepted out of the box.
         DefaultsKey.autoQuitExceptions: mandatoryAutoQuitExceptionBundleIDs,

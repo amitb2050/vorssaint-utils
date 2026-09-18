@@ -1760,6 +1760,12 @@ final class AppVolumeMixer: ObservableObject {
         return false
     }
 
+    /// Current system volume scalar on the default output device, or nil when unavailable.
+    static func currentSystemOutputVolume() -> Float32? {
+        guard let device = defaultOutputDeviceID() else { return nil }
+        return outputVolume(for: device)
+    }
+
     /// System volume as people mean it: the default output device's main
     /// scalar. Static on purpose so callers (the command bar) never spin the
     /// mixer up; false when the device exposes no software volume control.

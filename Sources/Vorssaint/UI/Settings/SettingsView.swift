@@ -507,6 +507,10 @@ struct GeneralSettings: View {
                 }
                 .settingsSectionAnchor(.musicBlocking)
             }
+            if AppFeature.hourlyBeep.isAvailable {
+                HourlyBeepSettingsSection()
+                    .settingsSectionAnchor(.hourlyBeep)
+            }
             Section(feedbackStrings.sectionTitle) {
                 Button {
                     appDelegate()?.openFeedbackWindow()

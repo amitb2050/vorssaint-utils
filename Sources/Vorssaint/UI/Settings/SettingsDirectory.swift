@@ -70,6 +70,9 @@ enum SettingsDirectory {
                                                   FeatureStrings.appearance(language).dark],
                                        featureKeywords: [
                                         (.musicBlock, [s.musicBlockTitle, s.musicBlockSection]),
+                                        (.hourlyBeep, [FeatureStrings.hourlyBeep(language).pageTitle,
+                                                       FeatureStrings.hourlyBeep(language).volumeCap,
+                                                       FeatureStrings.hourlyBeep(language).sound]),
                                        ]),
                 // Searching any feature name lands here even when the feature
                 // is hidden, so the hub is always the way back.

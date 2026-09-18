@@ -347,6 +347,7 @@ if (( TEST )); then
         Sources/Vorssaint/Core/Localization.swift
         Sources/Vorssaint/Core/Localizations/Strings+*.swift
         Sources/Vorssaint/Core/FeatureStrings.swift
+        Sources/Vorssaint/Core/HourlyBeepStrings.swift
         Sources/Vorssaint/Core/KillProcessStrings.swift
         Sources/Vorssaint/Core/WhatsAppDownloadStrings.swift
         Sources/Vorssaint/Core/WhatsAppOrganizerStrings.swift
@@ -362,6 +363,7 @@ if (( TEST )); then
         Sources/Vorssaint/Services/Audio/BoostLimiter.swift
         Sources/Vorssaint/Services/Audio/MixerRender.swift
         Sources/Vorssaint/Services/Audio/PreciseVolumeRollerSupport.swift
+        Sources/Vorssaint/Services/Audio/HourlyBeepSupport.swift
         Sources/Vorssaint/Services/DockPreview/DockPreviewSupport.swift
         Sources/Vorssaint/Services/Homebrew/HomebrewSupport.swift
         Sources/Vorssaint/Services/AppUpdates/AppUpdatesSupport.swift

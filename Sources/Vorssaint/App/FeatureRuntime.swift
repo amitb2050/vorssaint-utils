@@ -230,6 +230,7 @@ final class FeatureRuntime: ObservableObject {
         .soundOutputSwitcher: { SoundOutputSwitcher.shared.syncWithPreferences() },
         .micMute: { MicMuteService.shared.syncWithPreferences() },
         .musicBlock: { MusicLaunchBlocker.shared.syncWithPreferences() },
+        .hourlyBeep: { HourlyBeepService.shared.syncWithPreferences() },
         .keepAwake: {
             KeepAwakeManager.shared.syncWithFeatures()
             HotkeyManager.shared.syncWithPreferences()

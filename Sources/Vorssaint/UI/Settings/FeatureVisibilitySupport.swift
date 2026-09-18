@@ -18,6 +18,7 @@ enum SettingsPage: Hashable {
 enum SettingsSectionAnchor: String, CaseIterable, Hashable {
     case panelConfiguration
     case musicBlocking
+    case hourlyBeep
     case keepAwake
     case brightness
     case extraBrightness
@@ -52,7 +53,7 @@ enum SettingsSectionAnchor: String, CaseIterable, Hashable {
 
     var page: SettingsPage {
         switch self {
-        case .panelConfiguration, .musicBlocking: return .general
+        case .panelConfiguration, .musicBlocking, .hourlyBeep: return .general
         case .keepAwake, .brightness, .extraBrightness, .bluetoothSleep: return .energy
         case .scrollDirection, .focusFollowsMouse, .smoothScroll, .mouseAcceleration, .mouseNavigation, .mouseButtonShortcuts,
              .middleClick, .mouseClickDebounce:
@@ -208,6 +209,8 @@ extension AppFeature {
             return FeatureSettingsDestination(.quickTools, sectionAnchor: .micMute)
         case .musicBlock:
             return FeatureSettingsDestination(.general, sectionAnchor: .musicBlocking)
+        case .hourlyBeep:
+            return FeatureSettingsDestination(.general, sectionAnchor: .hourlyBeep)
 
         case .keepAwake:
             return FeatureSettingsDestination(.energy, sectionAnchor: .keepAwake)
